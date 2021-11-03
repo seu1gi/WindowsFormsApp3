@@ -36,7 +36,7 @@ namespace WindowsFormsApp3
 
                 string expendituresOutput = File.ReadAllText(@"./Expenditures.xml");
                 XElement expendituresXElement = XElement.Parse(expendituresOutput);
-                Expenditures = (from item in expendituresXElement.Descendants("expenditure")
+                Expenditures = (from item in expendituresXElement.Descendants("expenditure") 
                                 select new Expenditure()
                                 {
                                     Num = int.Parse(item.Element("num").Value),

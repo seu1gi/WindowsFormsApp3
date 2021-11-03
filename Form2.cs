@@ -40,7 +40,7 @@ namespace WindowsFormsApp3
         private void button1_Click(object sender, EventArgs e) //추가
         {
             try
-            {
+            { 
                 if (DataManager.Incomes.Exists(x => x.Num == int.Parse(textBox1.Text)))
                 {
                     MessageBox.Show("이미 존재하는 내역입니다.");
